@@ -6,13 +6,11 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Montserrat', sans-serif;
-        background-color:rgb(32, 35, 41);
     }
 
     .App{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background: rgb(133,88,61);
+        background: linear-gradient(90deg, rgba(133,88,61,1) 0%, rgba(82,56,40,1) 100%);
     }
 
 

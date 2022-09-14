@@ -1,6 +1,6 @@
 import React from 'react';
 import { GlobalStyle } from './styles/App';
-import { Header } from './components/Header';
+import { Home } from './components/Home';
 
 
 export function App() {
@@ -8,7 +8,7 @@ export function App() {
     <>
       <GlobalStyle/>
       <div className="App">
-        <Header/>
+        <Home/>
       </div>
     </>
   );
