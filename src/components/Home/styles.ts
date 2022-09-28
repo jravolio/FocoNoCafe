@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    color: #f2f2f2;
+    a{
+      text-decoration: none;
+    }
 
     .card{
+
+      color: #f2f2f2;
+
+
       cursor: pointer;
 
       display: flex;

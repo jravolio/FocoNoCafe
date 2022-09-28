@@ -15,7 +15,6 @@ export const Container = styled.div`
 
     h3{
         font-weight: 100;
-        opacity: 50%;
     }
 
 `
