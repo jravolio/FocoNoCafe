@@ -29,6 +29,15 @@ export function Home() {
           </Link>
         </SwiperSlide>
       </Swiper>
+
+      <div className="light">
+        <div className="fullBulb">
+        <div className="bulb">
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+      </div>
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 import { Container } from "./styles"
 
-export function Footer(){
+export function Navigate(){
     return(
         <Container>
             <footer>

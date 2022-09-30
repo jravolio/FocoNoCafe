@@ -1,11 +1,11 @@
 import { Container } from "./styles"
-
+import Logo from '../../assets/Logo.png'
 export function Header(){
     return(
         <Container>
-            <img src="https://images.pexels.com/photos/13527050/pexels-photo-13527050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto logomarca" />
+            <img src={Logo} alt="Foto logomarca" />
             <h1>FOCO NO CAFÉ</h1>
-            <h3>Produtos a serem vendidos</h3>
+            <h3>Uma coletânea de produtos especiais separados pra você!</h3>
         </Container>
     )
 }

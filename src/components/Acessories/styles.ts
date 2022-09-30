@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    background: rgb(25,51,56);
-    background: linear-gradient(0deg, rgba(25,51,56,1) 0%, rgba(23,23,23,1) 10%);
     .product{
         display: flex;
         justify-content: center;
