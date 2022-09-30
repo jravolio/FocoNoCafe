@@ -18,14 +18,18 @@ export const Container = styled.div`
 
     border-radius: 30px;
 
-    background-color: #523828;
-
+    
     padding-top: 2rem;
     padding-bottom: 2rem;
-
+    
     margin: 2rem;
+    
+    /* background-color: #523828;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); */
 
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    background-color: rgba(23,23,23, 0.9);
+    box-shadow:  5px 5px 18px #111111, -5px -5px 18px #1d1d1d;
 
     img {
       margin-bottom: 1.5rem;
