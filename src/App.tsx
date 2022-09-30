@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 
 export function App() {
-  const MINUTE_MS = 30000;
+  const MINUTE_MS = 60000;
 
   useEffect(() => {
     document.body.classList.add('on')

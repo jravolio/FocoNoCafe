@@ -49,6 +49,10 @@ export const Container = styled.div`
     left: 325px;
 
     transition: 0.1s;
+
+    @media (min-width: 768px){
+        left: 0px;
+    }
   }
 
 
@@ -97,5 +101,9 @@ export const Container = styled.div`
 
   .fullBulb{
     rotate: calc(180deg);
+    @media (min-width: 768px){
+        display: flex;
+        justify-content: center;
+    }
   }
 `;

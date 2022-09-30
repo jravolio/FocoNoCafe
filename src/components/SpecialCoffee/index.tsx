@@ -6,6 +6,9 @@ import Pico_do_bone_250 from '../../assets/coffees/Pico_do_bone_250.png'
 import Pico_do_bone_500 from '../../assets/coffees/Pico_do_bone_500.png'
 import Pico_do_bone_250_premiado from '../../assets/coffees/Pico_do_bone_250_premiado.png'
 import drip_coffee from '../../assets/coffees/drip_coffee.png'
+import drip_coffee_family from '../../assets/coffees/drip_coffee_family.png'
+
+
 export function SpecialCoffee(){
     return(
         <Container>
@@ -45,7 +48,7 @@ export function SpecialCoffee(){
             </div>
 
             <div className="product">
-                <img src={drip_coffee} alt="drip coffee" />
+                <img src={drip_coffee_family} alt="drip coffee" />
                 <h1>Coffee mais drip - Kit Família com 4 Caixas</h1>
                 <h3>Café Especial 100% arábico. Praticidade de café que pode ser coado em qualquer lugar.</h3>
                 <img className="logoLink" src={logo_shopee} alt="Logo da shoppee" />

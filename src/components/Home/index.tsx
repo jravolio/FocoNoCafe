@@ -5,12 +5,31 @@ import "swiper/css";
 import specialCoffeeImg from "../../assets/special_coffee.png";
 import acessoriesImg from "../../assets/acessories.png";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export function Home() {
+ 
+  //choose the screen size 
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      const slidesNumber = 1.25
+      return slidesNumber
+    } else {
+      const slidesNumber = 2
+      return slidesNumber
+    }
+  }
+  
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  })
+
+  
   return (
     <Container>
       <Header />
-      <Swiper spaceBetween={20} slidesPerView={1.25}>
+      <Swiper spaceBetween={20} slidesPerView={handleResize()}>
         <SwiperSlide>
           <Link to="/cafe">
             <div className="card">
