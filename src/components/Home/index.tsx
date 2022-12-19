@@ -1,13 +1,19 @@
 import { Container } from "./styles";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
+import acessoriesImg from '/src/assets/acessories.png'
+import specialCoffeeImg from '/src/assets/special_coffee.png'
+import instagramLogo from '/src/assets/instagram.svg'
+import facebookLogo from '/src/assets/facebook.svg'
+import youtubeLogo from '/src/assets/youtube.svg'
+import bgVideo from '/src/assets/video.mp4'
 
 export function Home() {
 
   return (
     <Container>
       <video
-        src="src/assets/video.mp4"
+        src={bgVideo}
         id="bg-video"
         autoPlay
         muted
@@ -23,34 +29,34 @@ export function Home() {
       <div className="links">
         <a href="https://www.youtube.com/@foconocafe5084" target='_blank' rel="noopener noreferrer" className="link youtube">
           <div>
-            <img src="src/assets/youtube.svg" alt="Youtube Logo" />
+            <img src={youtubeLogo} alt="Youtube Logo" />
             <p>YOUTUBE</p>
           </div>
           <p className="user">/foconocafe</p>
         </a>
         <a href="https://www.facebook.com/FoconoCafe" target='_blank' rel="noopener noreferrer" className="link facebook">
           <div>
-            <img src="src/assets/facebook.svg" alt="Facebook Logo" />
+            <img src={facebookLogo} alt="Facebook Logo" />
             <p>FACEBOOK</p>
           </div>
           <p className="user">/foconocafe</p>
         </a>
         <a href="https://www.instagram.com/foconocafe/" target='_blank' rel="noopener noreferrer" className="link instagram">
           <div>
-            <img src="src/assets/instagram.svg" alt="Instagram logo" />
+            <img src={instagramLogo} alt="Instagram logo" />
             <p>INSTAGRAM</p>
           </div>
           <p className="user">@foconocafe</p>
         </a>
-        <Link to="acessorios" className="link">
+        <Link to="cafe" className="link">
           <div>
-            <img src="src/assets/special_coffee.png" alt="" />
+            <img src={specialCoffeeImg} alt="" />
             <p>CAFÉS ESPECIAIS</p>
           </div>
         </Link>
-        <Link to="cafe" className="link">
+        <Link to="acessorios" className="link">
           <div>
-            <img src="src/assets/acessories.png" alt="" />
+            <img src={acessoriesImg} alt="" />
             <p>ACESSÓRIOS PARA CAFÉ</p>
           </div>
         </Link>

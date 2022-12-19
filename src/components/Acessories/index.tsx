@@ -4,10 +4,12 @@ import prensa_francesa from "../../assets/acessories/prensa_francesa.png";
 import cafeteira_italiana from '../../assets/acessories/cafeteira_italiana.png'
 import V60_Hario from '../../assets/acessories/V60_Hario.png'
 import filtro_v_60 from '../../assets/acessories/filtro_v_60.png'
+import { Arrow } from "../Arrow";
 
 export function Acessories(){
     return(
         <Container>
+            <Arrow/>
             <div className="product">
                 <img src={xicara} alt="Xícara" />
                 <h1>Casquinha Cup com Chocolate - Xícara</h1>
