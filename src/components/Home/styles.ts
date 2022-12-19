@@ -1,113 +1,147 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  a {
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f2f2f2;
+  text-align: center;
+
+  height: 100vh;
+
+  #bg-video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    z-index: -99;
+    animation: videoBg 10s forwards;
   }
 
-  .card {
-    color: #f2f2f2;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-
-    border-radius: 30px;
-
-    
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    
-    margin: 2rem;
-    
-    /* background-color: #523828;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25); */
-
-    border-radius: 35px;
-    background-color: rgba(23,23,23, 0.9);
-    box-shadow:  5px 5px 18px #111111, -5px -5px 18px #1d1d1d;
-
+  .animation-div {
+    text-shadow: 1px 3px 5px black;
+    margin-bottom: 2rem;
     img {
-      margin-bottom: 1.5rem;
-      height: 7rem;
+      transform: translateY(-100vh);
+      animation: fall 2.4s forwards;
+      width: 10rem;
+      clip-path: circle();
     }
 
     h1 {
-      font-size: 1.7rem;
+      transform: translateY(-100vh);
+      animation: fall 1.9s forwards;
+    }
+
+    h3 {
+      transform: translateY(-100vh);
+      animation: fall 1.5s forwards;
     }
   }
 
-
-
-  .bulb {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    background: #444;
-    border-radius: 50%;
-    z-index: 2;
-    left: 325px;
-
-    transition: 0.1s;
-
-    @media (min-width: 768px){
-        left: 0px;
+  @keyframes fall {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0vh);
     }
   }
 
-
-  .bulb::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: 22.5px;
-    width: 35px;
-    height: 80px;
-    background: #444;
-    border-top: 30px solid #000;
-    border-radius: 10px;
+  @keyframes videoBg {
+    100% {
+      filter: blur(1.5rem);
+    }
   }
 
-
-  .bulb span:nth-child(1) {
-    position: absolute;
-    top: -16px;
-    left: -4px;
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    transform: rotate(342deg);
-    border-bottom-right-radius: 40px;
-    box-shadow: 20px 20px 0 10px #444;
+  h3 {
+    font-weight: 300;
   }
 
+  .links {
+    background-color: #121616;
+    padding: 2rem;
+    border-radius: 12px;
 
+    .link {
+      background: rgb(224, 168, 106);
+      background: linear-gradient(
+        9deg,
+        rgba(224, 168, 106, 1) 0%,
+        rgba(180, 130, 76, 1) 77%
+      );
 
-  .bulb span:nth-child(2) {
-    position: absolute;
-    top: -16px;
-    right: -4px;
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    transform: rotate(17deg);
-    border-bottom-left-radius: 40px;
-    box-shadow: -20px 20px 0 10px #444;
-  }
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
 
+      border-radius: 12px;
+      padding: 1rem 2rem;
 
+      display: flex;
+      gap: 6rem;
+      align-items: center;
+      justify-content: space-between;
 
-  .fullBulb{
-    rotate: calc(180deg);
-    @media (min-width: 768px){
+      animation: rise 1.5s forwards;
+
+      div {
         display: flex;
-        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      img {
+        width: 2rem;
+      }
+
+      & + .link {
+        margin-top: 0.5rem;
+      }
+
+      .user {
+        font-size: 0.8rem;
+        opacity: 0.5;
+      }
+
+      &.youtube {
+        background: #cb1f1f;
+      }
+
+      &.facebook {
+        background: #1f64cb;
+      }
+
+      &.instagram {
+        background: rgb(255, 196, 45);
+        background: linear-gradient(
+          48deg,
+          rgba(255, 196, 45, 1) 0%,
+          rgba(255, 153, 0, 1) 17%,
+          rgba(211, 61, 205, 1) 70%,
+          rgba(82, 0, 255, 1) 96%,
+          rgba(0, 102, 255, 1) 100%
+        );
+      }
+    }
+
+    @keyframes rise {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    .links {
+      .link {
+        padding: 2rem 2rem;
+      }
     }
   }
 `;

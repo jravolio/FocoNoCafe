@@ -1,61 +1,59 @@
-import { Header } from "../Header/index";
 import { Container } from "./styles";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import specialCoffeeImg from "../../assets/special_coffee.png";
-import acessoriesImg from "../../assets/acessories.png";
+import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 export function Home() {
- 
-  //choose the screen size 
-  const handleResize = () => {
-    if (window.innerWidth < 720) {
-      const slidesNumber = 1.25
-      return slidesNumber
-    } else {
-      const slidesNumber = 2
-      return slidesNumber
-    }
-  }
-  
-  // create an event listener
-  useEffect(() => {
-    window.addEventListener("resize", handleResize)
-  })
 
-  
   return (
     <Container>
-      <Header />
-      <Swiper spaceBetween={20} slidesPerView={handleResize()}>
-        <SwiperSlide>
-          <Link to="/cafe">
-            <div className="card">
-              <img src={specialCoffeeImg} alt="Café especial" />
-              <h1>Cafés especiais</h1>
-            </div>
-          </Link>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Link to="/acessorios">
-            <div className="card">
-              <img src={acessoriesImg} alt="Acessórios para café" />
-              <h1>Acessórios</h1>
-            </div>
-          </Link>
-        </SwiperSlide>
-      </Swiper>
-
-      <div className="light">
-        <div className="fullBulb">
-        <div className="bulb">
-          <span></span>
-          <span></span>
+      <video
+        src="src/assets/video.mp4"
+        id="bg-video"
+        autoPlay
+        muted
+        loop
+      ></video>
+      <header>
+        <div className="animation-div">
+          <img src={Logo} alt="Foto logomarca" />
+          <h1>FOCO NO CAFÉ</h1>
+          <h3>Uma coletânea de produtos especiais separados pra você!</h3>
         </div>
-        </div>
+      </header>
+      <div className="links">
+        <a href="https://www.youtube.com/@foconocafe5084" target='_blank' rel="noopener noreferrer" className="link youtube">
+          <div>
+            <img src="src/assets/youtube.svg" alt="Youtube Logo" />
+            <p>YOUTUBE</p>
+          </div>
+          <p className="user">/foconocafe</p>
+        </a>
+        <a href="https://www.facebook.com/FoconoCafe" target='_blank' rel="noopener noreferrer" className="link facebook">
+          <div>
+            <img src="src/assets/facebook.svg" alt="Facebook Logo" />
+            <p>FACEBOOK</p>
+          </div>
+          <p className="user">/foconocafe</p>
+        </a>
+        <a href="https://www.instagram.com/foconocafe/" target='_blank' rel="noopener noreferrer" className="link instagram">
+          <div>
+            <img src="src/assets/instagram.svg" alt="Instagram logo" />
+            <p>INSTAGRAM</p>
+          </div>
+          <p className="user">@foconocafe</p>
+        </a>
+        <Link to="acessorios" className="link">
+          <div>
+            <img src="src/assets/special_coffee.png" alt="" />
+            <p>CAFÉS ESPECIAIS</p>
+          </div>
+        </Link>
+        <Link to="cafe" className="link">
+          <div>
+            <img src="src/assets/acessories.png" alt="" />
+            <p>ACESSÓRIOS PARA CAFÉ</p>
+          </div>
+        </Link>
       </div>
     </Container>
   );
