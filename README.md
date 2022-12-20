@@ -5,6 +5,8 @@
 
 <p>    </p>
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"/>
+<img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
 </div>
 
 
@@ -19,7 +21,7 @@ This project was created for an instagram coffee influencer, so it can have thei
 The site is online! you can visit it [here](https://foconocafe.com)! If you have any problem please contact me! ✉️
 
 ## - Technologies 🚀️
-On this project i used Vite the app and figma to plan the layout, i used React-Router to make the multipage and styled components to the css.
+On this project i used Vite and figma to plan the layout, i used React-Router to make the multipage and styled-components to the css.
 
 ## - How to setup ⛳
 First clone this project using:
