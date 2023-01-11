@@ -10,7 +10,11 @@ export const Container = styled.div`
         text-align: center;
         margin: 7rem 1rem;
 
-        color: #f2f2f2;
+        background-color: #d19b61;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        color: #171717;
 
         img{
             width: 14rem;
@@ -18,6 +22,7 @@ export const Container = styled.div`
 
         h3{
             font-weight: 300;
+            margin-top: 1rem;
         }
         
         .logoLink{
@@ -31,11 +36,10 @@ export const Container = styled.div`
         a{
             margin-top: 2rem;
             border-radius: 12px;
-            border: 1px solid #f2f2f2;
+            border: 1px solid #171717;
             padding: 0.5rem 7rem;
             text-decoration: none;
-            color: #f2f2f2;
-            opacity: 50%;
+            color: #171717;
 
         }
 
@@ -45,6 +49,13 @@ export const Container = styled.div`
                 left: -115px;
             }
         }
+    }
+
+
+  @media (min-width: 768px){
+    .product{
+        margin: 7rem 10rem;
+    }
     }
 
 `
